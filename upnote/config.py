@@ -13,7 +13,7 @@ class Config(object):
     print('upnote.config: SQLALCHEMY_DATABASE_URI', 'SQLALCHEMY_DATABASE_URI')
     if SQLALCHEMY_DATABASE_URI.startswith('postgres:'):
         print('update postres => postresql')
-        SQLALCHEMY_DATABASE_URI.replace('postgres:', 'postgresql:')
+        SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace('postgres:', 'postgresql:')
     print('upnote.config: SQLALCHEMY_DATABASE_URI', 'SQLALCHEMY_DATABASE_URI')
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
