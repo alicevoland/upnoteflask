@@ -1,1 +1,1 @@
-web: gunicorn app:upnote
+web: gunicorn app
