@@ -12,7 +12,7 @@ class Config(object):
     # https://stackoverflow.com/questions/62688256/sqlalchemy-exc-nosuchmoduleerror-cant-load-plugin-sqlalchemy-dialectspostgre
     print('upnote.config: SQLALCHEMY_DATABASE_URI', SQLALCHEMY_DATABASE_URI)
     if SQLALCHEMY_DATABASE_URI.startswith('postgres:'):
-        print('update postres => postresql')
+        print('update postgres => postgresql')
         SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace('postgres:', 'postgresql:')
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False

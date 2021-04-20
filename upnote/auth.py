@@ -26,8 +26,7 @@ def register():
         elif get_user_by_username(username):
             error = 'Username is already taken'
         else:
-            user = User(username=username, password=password)
-            create_user(user)
+            create_user(username, password)
             return redirect(url_for('auth.login'))
 
         flash(error)
