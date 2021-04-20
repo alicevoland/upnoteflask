@@ -2,6 +2,8 @@
 
 Very minimalist Flask toy project.
 
+Initially based on [Flask Tutorial](https://flask.palletsprojects.com/en/1.1.x/tutorial/), and then replaced SQLite with PostgreSQL
+
 ## Working fullstack app
 
 On heroku: <https://upnoteflask.herokuapp.com/> (free dyno, can take a few seconds to wake up on first hit)
