@@ -10,10 +10,9 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = environ['DATABASE_URL']
     # Fix heroku naming
     # https://stackoverflow.com/questions/62688256/sqlalchemy-exc-nosuchmoduleerror-cant-load-plugin-sqlalchemy-dialectspostgre
-    print('upnote.config: SQLALCHEMY_DATABASE_URI', 'SQLALCHEMY_DATABASE_URI')
+    print('upnote.config: SQLALCHEMY_DATABASE_URI', SQLALCHEMY_DATABASE_URI)
     if SQLALCHEMY_DATABASE_URI.startswith('postgres:'):
         print('update postres => postresql')
         SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace('postgres:', 'postgresql:')
-    print('upnote.config: SQLALCHEMY_DATABASE_URI', 'SQLALCHEMY_DATABASE_URI')
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
